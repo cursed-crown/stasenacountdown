@@ -123,6 +123,9 @@
                 <span class="number" id="seconds">0</span>
             </div>
         </div>
+        
+        <!-- Добавлен элемент для отображения текущего времени -->
+        <div class="current-time" id="currentTime"></div>
     </div>
 
     <script>
@@ -134,6 +137,7 @@
             
             const difference = targetDate - currentTime;
 
+            // Теперь этот элемент существует в DOM
             document.getElementById('currentTime').textContent = 
                 `Текущее время: ${currentTime.toLocaleString('ru-RU', { 
                     timeZone: 'Asia/Yekaterinburg',
